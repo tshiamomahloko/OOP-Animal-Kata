@@ -1,0 +1,14 @@
+{
+  "name": "oop_animal_tdd",
+  "version": "1.0.0",
+  "description": "Manipulate animal data",
+  "main": "animal.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Tshiamo Mahloko",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^3.5.0"
+  }
+}
