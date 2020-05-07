@@ -1,5 +1,5 @@
 class Animal {
-  constructor(name) {
+  setName(name) {
     this.name = name;
   }
   eat() {
@@ -7,33 +7,49 @@ class Animal {
   }
 }
 class Dog extends Animal {
-  setSound(dogSound) {
-    this.dogSound = dogSound;
-  }
   sound() {
-    console.log("Dog " + this.dogSound);
+    console.log("Dog barks");
   }
 }
 let dog = new Dog();
-let dogSound = "Barks";
-dog.setSound(dogSound);
-dog.name = "Rax";
+dog.setName("Rax");
 dog.eat();
 dog.sound();
 
 class Cat extends Animal {
-  setSound(catSound) {
-    this.catSound = catSound;
-  }
   sound() {
-    console.log("Cat " + this.catSound);
+    console.log("Cat meow");
   }
 }
-let cat = new Cat();
-let catSound = "Meow";
-cat.setSound(catSound);
-cat.name = "Stormy";
-cat.eat();
-cat.sound();
+let cat1 = new Cat();
+cat1.setName("Stormy");
+cat1.eat();
+cat1.sound();
 
-//module.exports = {Cat}
+//IGNORE
+console.log("");
+console.log("*************************************");
+console.log("");
+//END_IGNORE
+
+let anyAnimal = [];
+class Home {
+  adoptPet(animal) {
+    anyAnimal.push(animal);
+  }
+  makeAllSounds() {
+    for (var increment = 0; increment < anyAnimal.length; increment++) {
+      anyAnimal[increment].sound();
+    }
+  }
+}
+
+let home = new Home();
+let dog1 = new Dog();
+let dog2 = new Dog();
+let cat = new Cat();
+
+home.adoptPet(dog1);
+home.adoptPet(cat);
+home.adoptPet(dog2);
+home.makeAllSounds();
