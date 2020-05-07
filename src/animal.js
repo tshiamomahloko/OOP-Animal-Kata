@@ -32,14 +32,14 @@ console.log("*************************************");
 console.log("");
 //END_IGNORE
 
-let anyAnimal = [];
+let homeAnimals = [];
 class Home {
   adoptPet(animal) {
-    anyAnimal.push(animal);
+    homeAnimals.push(animal);
   }
   makeAllSounds() {
-    for (var increment = 0; increment < anyAnimal.length; increment++) {
-      anyAnimal[increment].sound();
+    for (var increment = 0; increment < homeAnimals.length; increment++) {
+      homeAnimals[increment].sound();
     }
   }
 }
