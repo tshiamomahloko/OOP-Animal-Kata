@@ -1,8 +1,4 @@
 const {Cat} = require('../src/animal')
-let cat = new Cat;
-let catSound = "Meow"
-cat.setSound(catSound)
-cat.name = "Stormy"
 
 describe('Display for Cat Implementation', function(){
     it('Should display name of the cat', function(){
